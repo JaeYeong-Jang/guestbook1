@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+    
 <%@ page import="java.util.List" %>
 <%@ page import="com.javaex.dao.GuestBookDao" %>
 <%@ page import="com.javaex.vo.GuestBookVo" %>
     
 <%
-
 GuestBookDao guestBookDao = new GuestBookDao();
 List<GuestBookVo> guestList = guestBookDao.guestbookList();
-
 %>
     
 <!DOCTYPE html>
@@ -18,6 +18,7 @@ List<GuestBookVo> guestList = guestBookDao.guestbookList();
 <title>Insert title here</title>
 </head>
 <body>
+
 <form action="add.jsp" method="post">
 <table border="1">
 	<tr>
@@ -36,10 +37,11 @@ List<GuestBookVo> guestList = guestBookDao.guestbookList();
 </table>
 </form>
 <br>
+
 <%
 	for(int i = 0; i <guestList.size();i++){
 %>
-<table>
+<table border="1">
 	<tr>
 		<td><%=guestList.get(i).getNo() %></td>
 		<td><%=guestList.get(i).getName() %></td>
@@ -55,5 +57,6 @@ List<GuestBookVo> guestList = guestBookDao.guestbookList();
 <%
 	}
 %>
+
 </body>
 </html>
