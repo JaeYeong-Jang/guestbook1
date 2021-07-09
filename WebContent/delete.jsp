@@ -4,7 +4,6 @@
 <%@ page import="com.javaex.dao.GuestBookDao" %>
 <%@ page import="com.javaex.vo.GuestBookVo" %>
 
-
 <%
 GuestBookDao guestBookDao = new GuestBookDao();
 

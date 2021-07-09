@@ -119,10 +119,12 @@ public class GuestBookDao {
 
 			query += "delete from guestbook ";
 			query += "where password = ? ";
+			query += "and no = ? ";
 
 			pstmt = conn.prepareStatement(query);
 
 			pstmt.setString(1, guestBookVo.getPw());
+			pstmt.setInt(2, guestBookVo.getNo());
 
 			count = pstmt.executeUpdate();
 

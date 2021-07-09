@@ -19,7 +19,6 @@
 	GuestBookDao guestBookDao = new GuestBookDao();
 	guestBookDao.guestBookInsert(guestBookVo);
 	//리스트 가져오기
-	List<GuestBookVo> guestBookList = guestBookDao.guestbookList();
 	response.sendRedirect("./list.jsp");
 	
 %>
