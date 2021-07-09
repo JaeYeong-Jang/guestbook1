@@ -18,6 +18,7 @@ public class GuestBookVo {
 		this.name = name;
 		this.pw = pw;
 		this.content = content;
+		
 	}
 	
 	public GuestBookVo(int no, String name, String pw, String content, String date) {

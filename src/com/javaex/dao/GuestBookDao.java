@@ -18,8 +18,8 @@ public class GuestBookDao {
 
 	private String driver = "oracle.jdbc.driver.OracleDriver";
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String id = "phonedb";
-	private String pw = "phonedb";
+	private String id = "webdb";
+	private String pw = "webdb";
 
 	// 데이터베이스 연결
 	private void getconnection() {
@@ -152,7 +152,7 @@ public class GuestBookDao {
 			String query = "";
 
 			query += "insert into guestbook ";
-			query += "values(seq_guestbook_no,?,?,?,sysdate) ";
+			query += "values(seq_guestbook_no.nextval,?,?,?,sysdate) ";
 			
 			pstmt = conn.prepareStatement(query);
 			

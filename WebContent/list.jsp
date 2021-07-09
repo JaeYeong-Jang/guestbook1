@@ -27,12 +27,14 @@ List<GuestBookVo> guestList = guestBookDao.guestbookList();
 		<td>비밀번호</td>
 		<td><input type="text" name="password" value=""></td>
 	</tr>
-
+	
 	<tr>
-		<td><textarea type="text" name="content" value=""></textarea></td>
+		<td colspan="4"><textarea name="content" ></textarea></td>
 	</tr>
 	
-	<tr><button type ="submit">확인</button></tr>
+	<tr>
+		<td colspan="4"><button type ="submit">확인</button></td>
+	</tr>
 
 </table>
 </form>
@@ -46,11 +48,11 @@ List<GuestBookVo> guestList = guestBookDao.guestbookList();
 		<td><%=guestList.get(i).getNo() %></td>
 		<td><%=guestList.get(i).getName() %></td>
 		<td><%=guestList.get(i).getDate() %></td>
-		<td><a href="./deleteForm.jsp">[삭제]</a></td>
+		<td><a href="./deleteForm.jsp?no=<%=guestList.get(i).getNo() %>">[삭제]</a></td>
 	</tr>
 	
 	<tr>
-		<td>첫번째 방명록내용<br><%=guestList.get(i).getContent() %></td>
+		<td colspan="4"><%=guestList.get(i).getContent() %></td>
 	</tr>
 </table>
 

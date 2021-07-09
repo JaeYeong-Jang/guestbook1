@@ -22,7 +22,6 @@
 	List<GuestBookVo> guestBookList = guestBookDao.guestbookList();
 	response.sendRedirect("./list.jsp");
 	
-	
 %>
 <!DOCTYPE html>
 <html>
