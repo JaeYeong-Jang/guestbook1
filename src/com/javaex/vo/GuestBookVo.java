@@ -14,6 +14,12 @@ public class GuestBookVo {
 		
 	}
 	
+	public GuestBookVo(int no,String pw) {
+		this.no = no;
+		this.pw = pw;
+		
+	}
+	
 	public GuestBookVo(String name,String pw, String content) {
 		this.name = name;
 		this.pw = pw;

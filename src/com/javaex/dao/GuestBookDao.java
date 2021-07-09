@@ -107,7 +107,7 @@ public class GuestBookDao {
 	}
 	
 	//삭제
-	public int guestBookDelete(int guestbookNo) {
+	public int guestBookDelete(GuestBookVo guestBookVo) {
 		
 		this.getconnection();
 
@@ -118,11 +118,11 @@ public class GuestBookDao {
 			String query = "";
 
 			query += "delete from guestbook ";
-			query += "where no = ? ";
+			query += "where password = ? ";
 
 			pstmt = conn.prepareStatement(query);
 
-			pstmt.setInt(1, guestbookNo);
+			pstmt.setString(1, guestBookVo.getPw());
 
 			count = pstmt.executeUpdate();
 
