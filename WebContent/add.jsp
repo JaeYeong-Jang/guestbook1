@@ -18,7 +18,7 @@
 	//저장하기
 	GuestBookDao guestBookDao = new GuestBookDao();
 	guestBookDao.guestBookInsert(guestBookVo);
-	//리스트 가져오기
+	//리스트 리다이렉트
 	response.sendRedirect("./list.jsp");
 	
 %>
